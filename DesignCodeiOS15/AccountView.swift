@@ -44,17 +44,7 @@ struct AccountView: View {
                             .fill(.ultraThinMaterial)
                 )
                 .background(
-                        Image(systemName: "hexagon")
-                            .symbolVariant(.fill)
-                            .foregroundStyle(
-                                    .linearGradient(
-                                            colors: [Color("AccentColor").opacity(0.1),
-                                                     Color("AccentColor").opacity(1)],
-                                            startPoint: .topLeading,
-                                            endPoint: .bottomTrailing)
-
-                            )
-                            .font(.system(size: 200))
+                        HexagonView()
                             .offset(x: -50, y: -100)
                 )
             Text("Twosom")

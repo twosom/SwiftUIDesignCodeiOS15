@@ -13,6 +13,7 @@
 		30F53DCB7384E2E28B805D6D /* DesignCodeiOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F53244C59748402F3BEBB4 /* DesignCodeiOS15App.swift */; };
 		F885D5D22783F8500078A60B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885D5D12783F8500078A60B /* Styles.swift */; };
 		F885D5D4278408460078A60B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885D5D3278408460078A60B /* AccountView.swift */; };
+		F8BE39912784386F009105A6 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE39902784386F009105A6 /* HexagonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		30F53865887333B030E0D275 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F885D5D12783F8500078A60B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		F885D5D3278408460078A60B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		F8BE39902784386F009105A6 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				30F53244C59748402F3BEBB4 /* DesignCodeiOS15App.swift */,
 				30F5352D43BFAB9373608D03 /* ContentView.swift */,
 				F885D5D3278408460078A60B /* AccountView.swift */,
+				F8BE39902784386F009105A6 /* HexagonView.swift */,
 				F885D5D12783F8500078A60B /* Styles.swift */,
 			);
 			path = DesignCodeiOS15;
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F885D5D4278408460078A60B /* AccountView.swift in Sources */,
+				F8BE39912784386F009105A6 /* HexagonView.swift in Sources */,
 				30F53DCB7384E2E28B805D6D /* DesignCodeiOS15App.swift in Sources */,
 				30F538365076F52144F3AF7F /* ContentView.swift in Sources */,
 				F885D5D22783F8500078A60B /* Styles.swift in Sources */,
