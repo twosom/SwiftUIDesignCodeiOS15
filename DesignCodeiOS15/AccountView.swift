@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct AccountView: View {
+
+    @State(initialValue: false)
+    private var isDeleted: Bool
+
     var body: some View {
         NavigationView {
             List {
@@ -25,7 +29,14 @@ struct AccountView: View {
                         .background(
                                 Image(systemName: "hexagon")
                                     .symbolVariant(.fill)
-                                    .foregroundColor(.blue)
+                                    .foregroundStyle(
+                                            .linearGradient(
+                                                    colors: [Color("AccentColor").opacity(0.1),
+                                                             Color("AccentColor").opacity(1)],
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing)
+
+                                    )
                                     .font(.system(size: 200))
                                     .offset(x: -50, y: -100)
                         )
@@ -63,14 +74,32 @@ struct AccountView: View {
                     .listRowSeparator(.hidden)
 
                 Section {
-                    Link(destination: URL(string: "https://apple.com")!) {
-                        HStack {
-                            Label("Apple Website", systemImage: "house")
-                            Spacer()
-                            Image(systemName: "link")
-                                .foregroundColor(.secondary)
+                    if !isDeleted {
+                        Link(destination: URL(string: "https://apple.com")!) {
+                            HStack {
+                                Label("Apple Website", systemImage: "house")
+                                Spacer()
+                                Image(systemName: "link")
+                                    .foregroundColor(.secondary)
+                            }
                         }
+                            .swipeActions(edge: .leading, allowsFullSwipe: true, content: {
+                                Button {
+                                    isDeleted = true
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
+                                    .tint(.red)
+
+                                Button {
+
+                                } label: {
+                                    Label("Pin", systemImage: "pin")
+                                }
+                                    .tint(.yellow)
+                            })
                     }
+
 
                     Link(destination: URL(string: "https://youtube.com")!) {
                         HStack {
@@ -94,6 +123,10 @@ struct AccountView: View {
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountView()
+        Group {
+            AccountView()
+            AccountView()
+                .preferredColorScheme(.dark)
+        }
     }
 }
