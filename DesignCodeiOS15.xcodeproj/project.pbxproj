@@ -11,6 +11,7 @@
 		30F538365076F52144F3AF7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5352D43BFAB9373608D03 /* ContentView.swift */; };
 		30F53CBD31535034CBC36614 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F53865887333B030E0D275 /* Preview Assets.xcassets */; };
 		30F53DCB7384E2E28B805D6D /* DesignCodeiOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F53244C59748402F3BEBB4 /* DesignCodeiOS15App.swift */; };
+		F885D5D22783F8500078A60B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885D5D12783F8500078A60B /* Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		30F5372C7DE3079DA3004EC8 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F53800944250C9E3E72E9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30F53865887333B030E0D275 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F885D5D12783F8500078A60B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				30F532D5A76FE6FD63FE3996 /* Preview Content */,
 				30F53244C59748402F3BEBB4 /* DesignCodeiOS15App.swift */,
 				30F5352D43BFAB9373608D03 /* ContentView.swift */,
+				F885D5D12783F8500078A60B /* Styles.swift */,
 			);
 			path = DesignCodeiOS15;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			files = (
 				30F53DCB7384E2E28B805D6D /* DesignCodeiOS15App.swift in Sources */,
 				30F538365076F52144F3AF7F /* ContentView.swift in Sources */,
+				F885D5D22783F8500078A60B /* Styles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +164,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lab.gravy.DesignCodeiOS15;
+				PRODUCT_BUNDLE_IDENTIFIER = lab.gravy.DesignCode;
 				PRODUCT_NAME = DesignCode;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -186,7 +190,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lab.gravy.DesignCodeiOS15;
+				PRODUCT_BUNDLE_IDENTIFIER = lab.gravy.DesignCode;
 				PRODUCT_NAME = DesignCode;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
