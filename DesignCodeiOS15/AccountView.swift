@@ -43,9 +43,22 @@ struct AccountView: View {
                         Circle()
                             .fill(.ultraThinMaterial)
                 )
+//                .background(
+//                        HexagonView()
+//                            .offset(x: -50, y: -100)
+//                )
                 .background(
-                        HexagonView()
-                            .offset(x: -50, y: -100)
+                        BlobView(colors: [.pink, .blue])
+                            .offset(x: 200, y: 0)
+                            .scaleEffect(0.6)
+                            .blur(radius: 1)
+                )
+                .background(
+                        BlobView(colors: [Color("AccentColor"), Color("AccentColor").opacity(0.4)],
+                                customAnimation: .interactiveSpring().delay(15))
+                            .offset(x: -400, y: 50)
+                            .scaleEffect(0.2)
+                            .blur(radius: 3)
                 )
             Text("Twosom")
                 .font(.title.weight(.semibold))
@@ -57,6 +70,7 @@ struct AccountView: View {
             }
         }
             .frame(maxWidth: .infinity)
+            .foregroundStyle(.thinMaterial)
             .padding()
     }
 

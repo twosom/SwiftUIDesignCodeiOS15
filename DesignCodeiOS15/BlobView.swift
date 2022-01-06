@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct BlobView: View {
+
+    @State(initialValue: false)
+    private var isAppear: Bool
+
+    var colors: [Color]
+
+    var customAnimation: Animation = .linear(duration: 20).repeatForever().delay(1)
+
+
     var body: some View {
         TimelineView(.animation) { timeline in
 
@@ -25,14 +34,20 @@ struct BlobView: View {
                                 x2: x2
                         ),
                         with: .linearGradient(
-                                Gradient(colors: [.pink, .blue]),
+                                Gradient(colors: colors),
                                 startPoint: CGPoint(x: x1 * x1, y: x2),
                                 endPoint: CGPoint(x: 400 * x2, y: 400 * x1 * 0.3)
                         )
                 )
             }
                 .frame(width: 400, height: 414)
+                .rotationEffect(.degrees(isAppear ? 360 : 0))
         }
+            .onAppear {
+                withAnimation(customAnimation) {
+                    self.isAppear = true
+                }
+            }
 
 
     }
@@ -84,6 +99,6 @@ struct BlobShape: Shape {
 
 struct BlobView_Previews: PreviewProvider {
     static var previews: some View {
-        BlobView()
+        BlobView(colors: [.pink, .blue])
     }
 }
