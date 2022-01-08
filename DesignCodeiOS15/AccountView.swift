@@ -43,10 +43,10 @@ struct AccountView: View {
                         Circle()
                             .fill(.ultraThinMaterial)
                 )
-//                .background(
-//                        HexagonView()
-//                            .offset(x: -50, y: -100)
-//                )
+                //                .background(
+                //                        HexagonView()
+                //                            .offset(x: -50, y: -100)
+                //                )
                 .background(
                         BlobView(colors: [.pink, .blue])
                             .offset(x: 200, y: 0)

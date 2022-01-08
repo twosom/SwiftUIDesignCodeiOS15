@@ -13,6 +13,7 @@
 		30F53CBD31535034CBC36614 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F53865887333B030E0D275 /* Preview Assets.xcassets */; };
 		30F53DCB7384E2E28B805D6D /* DesignCodeiOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F53244C59748402F3BEBB4 /* DesignCodeiOS15App.swift */; };
 		F809BE8E27873C8C00683BCA /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809BE8D27873C8C00683BCA /* BlobView.swift */; };
+		F87F9B19278961F300BE972E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F9B18278961F300BE972E /* Tab.swift */; };
 		F885D5D22783F8500078A60B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885D5D12783F8500078A60B /* Styles.swift */; };
 		F885D5D4278408460078A60B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885D5D3278408460078A60B /* AccountView.swift */; };
 		F8BE39912784386F009105A6 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE39902784386F009105A6 /* HexagonView.swift */; };
@@ -26,6 +27,7 @@
 		30F53865887333B030E0D275 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30F53B0D99FD665C26CEBFB1 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		F809BE8D27873C8C00683BCA /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
+		F87F9B18278961F300BE972E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		F885D5D12783F8500078A60B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		F885D5D3278408460078A60B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		F8BE39902784386F009105A6 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				F8BE39902784386F009105A6 /* HexagonView.swift */,
 				F885D5D12783F8500078A60B /* Styles.swift */,
 				30F53B0D99FD665C26CEBFB1 /* TabBar.swift */,
+				F87F9B18278961F300BE972E /* Tab.swift */,
 			);
 			path = DesignCodeiOS15;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				F885D5D4278408460078A60B /* AccountView.swift in Sources */,
 				F8BE39912784386F009105A6 /* HexagonView.swift in Sources */,
 				30F53DCB7384E2E28B805D6D /* DesignCodeiOS15App.swift in Sources */,
+				F87F9B19278961F300BE972E /* Tab.swift in Sources */,
 				F809BE8E27873C8C00683BCA /* BlobView.swift in Sources */,
 				30F538365076F52144F3AF7F /* ContentView.swift in Sources */,
 				F885D5D22783F8500078A60B /* Styles.swift in Sources */,

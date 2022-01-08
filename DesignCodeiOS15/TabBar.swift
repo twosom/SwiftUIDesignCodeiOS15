@@ -11,26 +11,22 @@ struct TabBar: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .offset(y: 300)
             HStack {
-                Spacer()
-                VStack(spacing: 0) {
-                    Image(systemName: "house")
-                        .symbolVariant(.fill)
-                        .font(.body.bold())
-                        .frame(width: 80, height: 29)
-                    Text("Learn Now")
-                        .font(.caption2)
+
+                ForEach(tabItems) { (tabItem: TabItem) in
+                    VStack(spacing: 0) {
+                        Image(systemName: tabItem.icon)
+                            .symbolVariant(.fill)
+                            .font(.body.bold())
+                            .frame(width: 44, height: 29)
+                        Text(tabItem.text)
+                            .font(.caption2)
+                            .lineLimit(1)
+                    }
+                        .frame(maxWidth: .infinity)
                 }
-                Spacer()
-                VStack(spacing: 0) {
-                    Image(systemName: "magnifyingglass")
-                        .symbolVariant(.fill)
-                        .font(.body.bold())
-                        .frame(width: 80, height: 29)
-                    Text("Explore")
-                        .font(.caption2)
-                }
-                Spacer()
+
             }
+                .padding(.horizontal, 8)
                 .padding(.top, 14)
                 .frame(height: 88, alignment: .top)
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
