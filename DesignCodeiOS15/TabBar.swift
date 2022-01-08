@@ -9,6 +9,9 @@ struct TabBar: View {
     @State(initialValue: Tab.HOME)
     private var selectedTab: Tab
 
+    @State(initialValue: Color.teal)
+    private var color: Color
+
     var body: some View {
         ZStack(alignment: .bottom) {
             Group {
@@ -27,7 +30,10 @@ struct TabBar: View {
 
                 ForEach(tabItems) { (tabItem: TabItem) in
                     Button {
-                        selectedTab = tabItem.tab
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                            selectedTab = tabItem.tab
+                            color = tabItem.color
+                        }
                     } label: {
                         VStack(spacing: 0) {
                             Image(systemName: tabItem.icon)
@@ -41,7 +47,8 @@ struct TabBar: View {
                             .frame(maxWidth: .infinity)
 
                     }
-                        .foregroundStyle(selectedTab == tabItem.tab ? .primary : .secondary)
+                        .foregroundStyle(isSelected(tabItem) ? .primary : .secondary)
+                        .blendMode(isSelected(tabItem) ? .overlay : .normal)
 
                 }
 
@@ -50,11 +57,74 @@ struct TabBar: View {
                 .padding(.top, 14)
                 .frame(height: 88, alignment: .top)
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
+                .background(
+                        HStack {
+                            if selectedTab == .LIBRARY {
+                                Spacer()
+                            } else if selectedTab == .EXPLORE {
+                                Spacer()
+                            } else if selectedTab == .NOTIFICATIONS {
+                                Spacer()
+                                Spacer()
+                            }
+                            Circle()
+                                .fill(color)
+                                .frame(width: 80)
+
+                            if selectedTab == .HOME {
+                                Spacer()
+                            } else if selectedTab == .EXPLORE {
+                                Spacer()
+                                Spacer()
+                            } else if selectedTab == .NOTIFICATIONS {
+                                Spacer()
+                            }
+
+                        }
+                            .padding(.horizontal, 8)
+
+
+                )
+                .overlay(
+                        HStack {
+                            if selectedTab == .LIBRARY {
+                                Spacer()
+                            } else if selectedTab == .EXPLORE {
+                                Spacer()
+                            } else if selectedTab == .NOTIFICATIONS {
+                                Spacer()
+                                Spacer()
+                            }
+                            Rectangle()
+                                .fill(color)
+                                .frame(width: 28, height: 5)
+                                .cornerRadius(3)
+                                .frame(width: 88)
+                                .frame(maxHeight: .infinity, alignment: .top)
+
+                            if selectedTab == .HOME {
+                                Spacer()
+                            } else if selectedTab == .EXPLORE {
+                                Spacer()
+                                Spacer()
+                            } else if selectedTab == .NOTIFICATIONS {
+                                Spacer()
+                            }
+
+                        }
+                            .padding(.horizontal, 8)
+
+
+                )
                 .strokeStyle(cornerRadius: 34)
                 .frame(maxHeight: .infinity, alignment: .bottom)
                 .ignoresSafeArea()
         }
 
+    }
+
+    private func isSelected(_ tabItem: TabItem) -> Bool {
+        selectedTab == tabItem.tab
     }
 
 

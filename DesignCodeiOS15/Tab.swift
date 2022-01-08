@@ -12,13 +12,14 @@ struct TabItem: Identifiable {
     var text: String
     var icon: String
     var tab: Tab
+    var color: Color
 }
 
 var tabItems = [
-    TabItem(text: "Learn Now", icon: "house", tab: .HOME),
-    TabItem(text: "Explore", icon: "magnifyingglass", tab: .EXPLORE),
-    TabItem(text: "Notifications", icon: "bell", tab: .NOTIFICATIONS),
-    TabItem(text: "Library", icon: "rectangle.stack", tab: .LIBRARY),
+    TabItem(text: "Learn Now", icon: "house", tab: .HOME, color: .teal),
+    TabItem(text: "Explore", icon: "magnifyingglass", tab: .EXPLORE, color: .blue),
+    TabItem(text: "Notifications", icon: "bell", tab: .NOTIFICATIONS, color: .red),
+    TabItem(text: "Library", icon: "rectangle.stack", tab: .LIBRARY, color: .pink),
 ]
 
 enum Tab: String {
