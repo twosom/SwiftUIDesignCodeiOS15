@@ -16,7 +16,7 @@ struct TabItem: Identifiable {
 }
 
 var tabItems = [
-    TabItem(text: "Learn Now", icon: "house", tab: .HOME, color: .teal),
+    TabItem(text: "Learn More", icon: "house", tab: .HOME, color: .teal),
     TabItem(text: "Explore", icon: "magnifyingglass", tab: .EXPLORE, color: .blue),
     TabItem(text: "Notifications", icon: "bell", tab: .NOTIFICATIONS, color: .red),
     TabItem(text: "Library", icon: "rectangle.stack", tab: .LIBRARY, color: .pink),
@@ -27,4 +27,12 @@ enum Tab: String {
     case EXPLORE
     case NOTIFICATIONS
     case LIBRARY
+}
+
+struct TabPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
 }
