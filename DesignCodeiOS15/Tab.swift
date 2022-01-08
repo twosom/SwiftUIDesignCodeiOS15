@@ -11,11 +11,19 @@ struct TabItem: Identifiable {
     var id: UUID = UUID()
     var text: String
     var icon: String
+    var tab: Tab
 }
 
 var tabItems = [
-    TabItem(text: "Learn Now", icon: "house"),
-    TabItem(text: "Explore", icon: "magnifyingglass"),
-    TabItem(text: "Notifications", icon: "bell"),
-    TabItem(text: "Library", icon: "rectangle.stack"),
+    TabItem(text: "Learn Now", icon: "house", tab: .HOME),
+    TabItem(text: "Explore", icon: "magnifyingglass", tab: .EXPLORE),
+    TabItem(text: "Notifications", icon: "bell", tab: .NOTIFICATIONS),
+    TabItem(text: "Library", icon: "rectangle.stack", tab: .LIBRARY),
 ]
+
+enum Tab: String {
+    case HOME
+    case EXPLORE
+    case NOTIFICATIONS
+    case LIBRARY
+}

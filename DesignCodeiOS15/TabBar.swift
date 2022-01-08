@@ -5,24 +5,44 @@
 import SwiftUI
 
 struct TabBar: View {
+
+    @State(initialValue: Tab.HOME)
+    private var selectedTab: Tab
+
     var body: some View {
         ZStack(alignment: .bottom) {
-            ContentView()
+            Group {
+                switch selectedTab {
+                case .HOME:
+                    ContentView()
+                case .EXPLORE:
+                    AccountView()
+                default:
+                    ContentView()
+                }
+            }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .offset(y: 300)
+
             HStack {
 
                 ForEach(tabItems) { (tabItem: TabItem) in
-                    VStack(spacing: 0) {
-                        Image(systemName: tabItem.icon)
-                            .symbolVariant(.fill)
-                            .font(.body.bold())
-                            .frame(width: 44, height: 29)
-                        Text(tabItem.text)
-                            .font(.caption2)
-                            .lineLimit(1)
+                    Button {
+                        selectedTab = tabItem.tab
+                    } label: {
+                        VStack(spacing: 0) {
+                            Image(systemName: tabItem.icon)
+                                .symbolVariant(.fill)
+                                .font(.body.bold())
+                                .frame(width: 44, height: 29)
+                            Text(tabItem.text)
+                                .font(.caption2)
+                                .lineLimit(1)
+                        }
+                            .frame(maxWidth: .infinity)
+
                     }
-                        .frame(maxWidth: .infinity)
+                        .foregroundStyle(selectedTab == tabItem.tab ? .primary : .secondary)
+
                 }
 
             }
@@ -36,6 +56,8 @@ struct TabBar: View {
         }
 
     }
+
+
 }
 
 
