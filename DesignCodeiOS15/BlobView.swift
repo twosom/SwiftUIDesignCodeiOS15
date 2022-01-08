@@ -14,7 +14,7 @@ struct BlobView: View {
 
     var colors: [Color]
 
-    var customAnimation: Animation = .linear(duration: 20).repeatForever().delay(1)
+    var customAnimation: Animation = .linear(duration: 20).repeatForever(autoreverses: false).delay(1)
 
 
     var body: some View {
@@ -99,6 +99,6 @@ struct BlobShape: Shape {
 
 struct BlobView_Previews: PreviewProvider {
     static var previews: some View {
-        BlobView(colors: [.pink, .blue])
+        BlobView(colors: [.pink, .blue.opacity(0.685)])
     }
 }

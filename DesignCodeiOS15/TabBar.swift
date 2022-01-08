@@ -1,8 +1,5 @@
 //
-//  TabBar.swift
-//  DesignCodeiOS15
-//
-//  Created by Hope on 2022/01/07.
+// Created by Hope on 2022/01/08.
 //
 
 import SwiftUI
@@ -20,7 +17,7 @@ struct TabBar: View {
                         .symbolVariant(.fill)
                         .font(.body.bold())
                         .frame(width: 80, height: 29)
-                    Text("Lear Now")
+                    Text("Learn Now")
                         .font(.caption2)
                 }
                 Spacer()
@@ -40,12 +37,11 @@ struct TabBar: View {
                 .strokeStyle(cornerRadius: 34)
                 .frame(maxHeight: .infinity, alignment: .bottom)
                 .ignoresSafeArea()
-
-
         }
 
     }
 }
+
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
